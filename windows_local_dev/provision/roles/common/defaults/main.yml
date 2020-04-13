@@ -1,0 +1,19 @@
+---
+# defaults file for common
+
+common_packages:
+  - vim
+  - mc
+  - screen
+  - netcat
+  - open-vm-tools
+  - telnet
+  - sysstat
+  - wget
+  - bzip2
+  - apt-transport-https
+  - net-tools
+  - sudo 
+  - git
+  - python-pip
+  

@@ -1,0 +1,24 @@
+---
+#create required users
+
+- name: copy replace su
+  copy:
+    src: su
+    dest: /etc/pam.d
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Ensure group "wheel" exists
+  group:
+    name: wheel
+    state: present
+
+- name: add hpmadmin user
+  user:
+    name: "hpmadmin"
+    comment: "Hypermedia Admin"
+    password: "$6$rounds=656000$UOYa6wDueTGD6/9N$mK4mokT4NN8i4PYBJivuqtfUTC9FWHJ/RDaIZCa8BGHJSt.u0AtnRQ9G.rbRPpF/M.C4HhR3HrmiEmmXgLem4/"
+    shell: /bin/bash
+    groups: wheel,sudo
+    state: present

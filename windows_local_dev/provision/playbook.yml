@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: true
+  roles:
+    - common
+    # - hello_web
+    - docker-ce-ansible-role

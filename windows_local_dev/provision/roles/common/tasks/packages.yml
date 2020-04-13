@@ -1,0 +1,14 @@
+---
+#install common packages
+
+- name: install common packages
+  apt:
+    pkg: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{common_packages}}"
+  when: ansible_os_family == "Debian"
+
+- name: install ansible 
+  pip:
+    name: ansible==2.8.5

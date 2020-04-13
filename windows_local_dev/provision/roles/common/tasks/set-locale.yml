@@ -1,0 +1,3 @@
+---
+- shell: echo "LANG=en_US.utf-8" >> /etc/environment
+- shell: echo "LC_ALL=en_US.utf-8" >> /etc/environment
