@@ -3,8 +3,8 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.define "vm_1" do |vm_1|
-    vm_1.vm.synced_folder "/Users/andreirad/Workspace/DEV/hypercloud/hypertalk/", "/srv/website"
-    vm_1.vm.network "forwarded_port", guest: 80, host: 8086
+    vm_1.vm.synced_folder "/Users/andreirad/Workspace/", "/srv/workspace"
+    #vm_1.vm.network "forwarded_port", guest: 80, host: 8086
     vm_1.vm.box = "ubuntu/bionic64"
     vm_1.vm.hostname = "vmlocaldev"
     vm_1.vm.network "private_network", ip: "10.30.0.101"
