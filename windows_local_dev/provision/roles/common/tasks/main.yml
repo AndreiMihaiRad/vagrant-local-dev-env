@@ -1,6 +1,10 @@
 ---
 # tasks file for common
 
+- name: Set timezone to Europe/Bucharest
+  timezone:
+    name: Europe/Bucharest
+
 - include: packages.yml
   tags: [packages,common]
 

@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
     vm_1.vm.box = "ubuntu/bionic64"
     vm_1.vm.hostname = "vmlocaldev"
     vm_1.vm.network "private_network", ip: "10.30.0.101"
+    vm_1.vm.boot_timeout = 600
     vm_1.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = "2"

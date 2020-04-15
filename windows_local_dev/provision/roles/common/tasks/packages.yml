@@ -12,3 +12,4 @@
 - name: install ansible 
   pip:
     name: ansible==2.8.5
+    extra_args: --no-cache-dir
